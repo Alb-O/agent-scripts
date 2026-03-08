@@ -13,7 +13,7 @@ let
 in
 {
   materializer.ownFragments.committer = [ committerAgentsText ];
-  materializer.mergedFragments = lib.mkAfter [ committerAgentsText ];
+  materializer.mergedFragments = lib.mkBefore [ committerAgentsText ];
 
   packages = [ committer ];
 
