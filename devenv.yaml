@@ -1,8 +1,3 @@
 inputs:
   nixpkgs:
     url: github:cachix/devenv-nixpkgs/rolling
-  materializer:
-    url: git+https://github.com/Alb-O/materializer.git?ref=main
-    flake: false
-imports:
-  - materializer

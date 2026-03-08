@@ -12,10 +12,17 @@ let
   };
 in
 {
-  materializer.ownFragments.committer = [ committerAgentsText ];
-  materializer.mergedFragments = lib.mkBefore [ committerAgentsText ];
+  options.instructions.fragments = lib.mkOption {
+    type = with lib.types; listOf str;
+    default = [];
+    description = "Shared instruction text fragments that modules can add.";
+  };
 
-  packages = [ committer ];
+  config = {
+    instructions.fragments = lib.mkBefore [ committerAgentsText ];
 
-  outputs.committer = committer;
+    packages = [ committer ];
+
+    outputs.committer = committer;
+  };
 }
