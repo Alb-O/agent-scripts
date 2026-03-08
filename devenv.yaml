@@ -1,3 +1,8 @@
 inputs:
   nixpkgs:
     url: github:cachix/devenv-nixpkgs/rolling
+  env-local-overrides:
+    url: github:Alb-O/env-local-overrides
+    flake: false
+imports:
+  - env-local-overrides
