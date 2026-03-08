@@ -12,8 +12,8 @@ let
   };
 in
 {
-  agentsInstructions.ownFragments.committer = [ committerAgentsText ];
-  agentsInstructions.mergedFragments = lib.mkAfter [ committerAgentsText ];
+  materializer.ownFragments.committer = [ committerAgentsText ];
+  materializer.mergedFragments = lib.mkAfter [ committerAgentsText ];
 
   packages = [ committer ];
 
