@@ -3,7 +3,7 @@
 `committer` helper script packaged via `devenv`.
 
 - Consumable output: `outputs.committer`
-- Adds its AGENTS text to `instructions.fragments` (used by `materializer`)
+- Adds its AGENTS text to `instructions.instructions` (used by `composer`)
 - In-shell command: `committer`
 - Usage: `committer <repo-path> "commit message" <file-or-glob> [more files/globs...]`
 - Example: `committer . $'feat(domain): add selected files\n\n- include docs\n- include test fixture' test.txt "weird name.txt" "dir/*.md"`                    

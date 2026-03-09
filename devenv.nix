@@ -12,14 +12,14 @@ let
   };
 in
 {
-  options.instructions.fragments = lib.mkOption {
+  options.instructions.instructions = lib.mkOption {
     type = with lib.types; listOf str;
     default = [];
-    description = "Shared instruction text fragments that modules can add.";
+    description = "Shared instruction text that modules can add.";
   };
 
   config = {
-    instructions.fragments = lib.mkBefore [ (builtins.readFile ./AGENTS.md) ];
+    instructions.instructions = lib.mkBefore [ (builtins.readFile ./AGENTS.md) ];
 
     packages = [ committer ];
 
